@@ -1,0 +1,11 @@
+{% extends 'apps/base.html' %}
+{% load static %}
+{% block content %}
+    <h1>Delete BMI Record</h1>
+    <form method="post">
+        {% csrf_token %}
+        <p>Are you sure you want to delete this BMI record?</p>
+        <input type="submit" value="Delete">
+    </form>
+    <a href="{% url 'bmi_record_list' %}" class="button">Back to BMI Records</a>
+{% endblock content %}

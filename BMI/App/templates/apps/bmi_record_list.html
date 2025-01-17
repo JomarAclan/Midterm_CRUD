@@ -1,0 +1,12 @@
+{% extends 'apps/base.html' %}
+{% load static %}
+{% block content %}
+    <h1>BMI Records</h1>
+    <ul>
+        {% for record in bmi_records %}
+            <li>
+                <a href="{% url 'bmi_detail' record.pk %}">BMI Record on {{ record.date }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock content %}

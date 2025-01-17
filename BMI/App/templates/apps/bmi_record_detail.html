@@ -1,0 +1,15 @@
+{% extends 'apps/base.html' %}
+{% load static %}
+{% block content %}
+    <h1>BMI Record Detail</h1>
+    <div class="record-detail">
+        <p>Weight: {{ bmi_record.weight }} kg</p>
+        <p>Height: {{ bmi_record.height }} cm</p>
+        <p>BMI: {{ bmi_record.bmi }}</p>
+        <p>Category: {{ bmi_record.bmi_category }}</p>
+        <p>Date: {{ bmi_record.date }}</p>
+        <a href="{% url 'bmi_update' bmi_record.pk %}" class="button">Edit</a>
+        <a href="{% url 'bmi_delete' bmi_record.pk %}" class="button">Delete</a>
+        <a href="{% url 'bmi_record_list' %}" class="button">Back to BMI Records</a>
+    </div>
+{% endblock content %}

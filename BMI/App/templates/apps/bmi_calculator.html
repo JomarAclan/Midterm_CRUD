@@ -1,0 +1,17 @@
+{% extends 'apps/base.html' %}
+{% load static %}
+{% block content %}
+    <h1>BMI Calculator</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="weight">Weight (kg):</label>
+        <input type="number" id="weight" name="weight" required>
+        <label for="height">Height (cm):</label>
+        <input type="number" id="height" name="height" required>
+        <input type="submit" value="Calculate">
+    </form>
+    {% if bmi %}
+        <p>Your BMI is: {{ bmi }}</p>
+        <p>Category: {{ bmi_category }}</p>
+    {% endif %}
+{% endblock content %}

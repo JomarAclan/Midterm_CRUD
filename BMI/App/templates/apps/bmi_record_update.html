@@ -1,0 +1,11 @@
+{% extends 'apps/base.html' %}
+{% load static %}
+{% block content %}
+    <h1>Edit BMI Record</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Save">
+    </form>
+    <a href="{% url 'bmi_record_list' %}" class="button">Back to BMI Records</a>
+{% endblock content %}

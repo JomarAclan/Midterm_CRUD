@@ -1,0 +1,18 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Body Mass Index</title>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+</head>
+<body>
+    {% include 'apps/navbar.html' %}
+
+    {% block content %}
+    {% endblock content %}
+    
+    <script src="{% static 'js/base.js' %}"></script>
+</body>
+</html>
