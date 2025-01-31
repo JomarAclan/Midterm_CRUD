@@ -13,8 +13,15 @@ class Post(models.Model):
         return reverse("blog_detail", kwargs={"pk": self.pk})
 
 class BMIRecord(models.Model):
+    GENDER_CHOICES = [
+        ('M', 'Male'),
+        ('F', 'Female'),
+    ]
+
     weight = models.FloatField()
     height = models.FloatField()
+    age = models.IntegerField(default=30)  
+    gender = models.CharField(max_length=1, choices=GENDER_CHOICES)
     bmi = models.FloatField()
     bmi_category = models.CharField(max_length=20, blank=True)
     date = models.DateTimeField(auto_now_add=True)

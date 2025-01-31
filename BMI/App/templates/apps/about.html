@@ -1,5 +1,40 @@
-{% extends 'apps/base.html'  %}
+{% extends 'apps/base.html' %}
 
 {% block content %}
-      <h1> About your BMI </h1>
+    <h1>About BMI</h1>
+    <div class="about-section">
+        <h2>What is BMI?</h2>
+        <p>Body Mass Index (BMI) BMI is a measurement of a person's leanness or corpulence based 
+        on their height and weight, and is intended to quantify tissue mass. It is widely used as 
+        a general indicator of whether a person has a healthy body weight for their height. 
+        Specifically, the value obtained from the calculation of BMI is used to categorize whether 
+        a person is underweight, normal weight, overweight, or obese depending on what range the value 
+        falls between. These ranges of BMI vary based on factors such as region and age, and are sometimes 
+        further divided into subcategories such as severely underweight or very severely obese. 
+        Being overweight or underweight can have significant health effects, 
+        so while BMI is an imperfect measure of healthy body weight, it is a useful indicator of whether 
+        any additional testing or action is required. Refer to the table below to see the different 
+        categories based on BMI that are used by the calculator.</p>
+
+        <h2>How is BMI Calculated?</h2>
+        <p>The formula for calculating BMI is:</p>
+        <p><strong>BMI = weight (kg) / (height (m) * height (m))</strong></p>
+        <p>For example, if you weigh 70 kg and your height is 1.75 meters, your BMI would be calculated as follows:</p>
+        <p><strong>BMI = 70 / (1.75 * 1.75) = 22.86</strong></p>
+
+        <h2>BMI Categories</h2>
+        <p>BMI categories help to identify whether you are underweight, normal weight, overweight, or obese. The categories are as follows:</p>
+        <ul>
+            <li><strong>Underweight:</strong> BMI less than 18.5</li>
+            <li><strong>Normal weight:</strong> BMI between 18.5 and 24.9</li>
+            <li><strong>Overweight:</strong> BMI between 25 and 29.9</li>
+            <li><strong>Obesity:</strong> BMI 30 or greater</li>
+        </ul>
+
+        <h2>Importance of Maintaining a Healthy BMI</h2>
+        <p>Maintaining a healthy BMI is important for overall health and well-being. A BMI in the normal weight range is associated with a lower risk of chronic diseases such as heart disease, diabetes, and certain cancers. It is important to maintain a balanced diet and regular physical activity to achieve and maintain a healthy BMI.</p>
+
+        <h2>Limitations of BMI</h2>
+        <p>While BMI is a useful screening tool, it does have limitations. It does not take into account muscle mass, bone density, and distribution of fat. Therefore, it may not be accurate for athletes, elderly individuals, or those with a muscular build. It is always best to consult with a healthcare provider for a comprehensive assessment of your health.</p>
+    </div>
 {% endblock content %}

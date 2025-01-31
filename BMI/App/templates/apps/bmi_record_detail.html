@@ -5,6 +5,8 @@
     <div class="record-detail">
         <p>Weight: {{ bmi_record.weight }} kg</p>
         <p>Height: {{ bmi_record.height }} cm</p>
+        <p>Age: {{ bmi_record.age }}</p>
+        <p>Gender: {{ bmi_record.get_gender_display }}</p>
         <p>BMI: {{ bmi_record.bmi }}</p>
         <p>Category: {{ bmi_record.bmi_category }}</p>
         <p>Date: {{ bmi_record.date }}</p>

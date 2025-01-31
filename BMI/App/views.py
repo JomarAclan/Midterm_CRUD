@@ -43,7 +43,7 @@ class BMICalculatorView(CreateView):
 
     def form_valid(self, form):
         weight = form.cleaned_data['weight']
-        height = form.cleaned_data['height'] / 100  
+        height = form.cleaned_data['height'] / 100 
         bmi = weight / (height ** 2)
         form.instance.bmi = bmi
 
@@ -71,12 +71,12 @@ class BMIRecordDetailView(DetailView):
 
 class BMIRecordUpdateView(UpdateView):
     model = BMIRecord
-    fields = ['weight', 'height']
+    fields = ['weight', 'height', 'age', 'gender']
     template_name = 'apps/bmi_record_update.html'
 
     def form_valid(self, form):
         weight = form.cleaned_data['weight']
-        height = form.cleaned_data['height'] / 100  
+        height = form.cleaned_data['height'] / 100 
         bmi = weight / (height ** 2)
         form.instance.bmi = bmi
 
